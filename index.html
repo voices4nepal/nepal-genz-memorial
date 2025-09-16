@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In Memory - Nepal GenZ Protest Movement</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/Flag_of_Nepal.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/Flag_of_Nepal.png"
+    />
+    <link rel="shortcut icon" href="images/Flag_of_Nepal.png" />
+    <link rel="apple-touch-icon" href="images/Flag_of_Nepal.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="js/memorial.js" defer></script>
+  </head>
+  <body>
+    <!-- Hero Section with Candle -->
+    <section class="hero">
+      <div class="nepal-flag">
+        <img src="images/Flag_of_Nepal.png" alt="Flag of Nepal" />
+      </div>
+      <div class="candle-container">
+        <div class="candle">
+          <div class="flame"></div>
+          <div class="wick"></div>
+          <div class="wax"></div>
+          <div class="base"></div>
+        </div>
+      </div>
+      <div class="hero-text">
+        <h1>In Loving Memory</h1>
+        <p class="subtitle">
+          Honoring the Brave Souls Who Fought Against Corruption
+        </p>
+        <div class="description">
+          <p>
+            This memorial honors the young heroes of Nepal’s Gen Z
+            Revolution—those who gave their lives demanding accountability,
+            justice, and a future free from corruption. Their sacrifice lit a
+            flame of courage that will never be forgotten.
+          </p>
+          <p class="info-link">
+            <a
+              href="https://en.wikipedia.org/wiki/2025_Nepalese_Gen_Z_protests"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn more about the protest
+            </a>
+          </p>
+          <p class="scroll-indicator">Scroll down to remember them ↓</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Memorial Profiles Section -->
+    <section class="memorial-section">
+      <h2>Forever in Our Hearts</h2>
+
+      <div class="profiles-info">
+        <div class="profile-count">
+          <span id="profile-count">Loading...</span>
+        </div>
+        <div class="sort-controls">
+          <span class="sort-label">Sort by name:</span>
+          <button id="sort-az" class="sort-btn active">A-Z</button>
+          <button id="sort-za" class="sort-btn">Z-A</button>
+        </div>
+      </div>
+
+      <div class="profiles-grid" id="profiles-grid">
+        <!-- Profiles will be loaded dynamically from data/profiles.json -->
+        <div class="loading-message">
+          <p>Loading memorial profiles...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Their sacrifice will not be forgotten. Their dreams live on in us.</p>
+      <p class="date">
+        In memory of those who gave everything for Nepal's future
+      </p>
+      <p class="sources-link">
+        <a href="SOURCES.md" target="_blank">Sources</a>
+      </p>
+    </footer>
+  </body>
+</html>

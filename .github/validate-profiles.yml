@@ -1,0 +1,144 @@
+name: Validate Memorial Profiles
+
+on:
+  pull_request:
+    paths:
+      - "data/profiles.json"
+      - "images/**"
+
+jobs:
+  validate-profiles:
+    runs-on: ubuntu-latest
+    name: Validate Profile Data
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Validate JSON syntax
+        run: |
+          echo "Validating profiles.json syntax..."
+          node -e "
+            const fs = require('fs');
+            try {
+              const data = JSON.parse(fs.readFileSync('data/profiles.json', 'utf8'));
+              console.log('✅ JSON syntax is valid');
+              console.log(\`📊 Found \${data.length} profiles\`);
+            } catch (error) {
+              console.error('❌ JSON syntax error:', error.message);
+              process.exit(1);
+            }
+          "
+
+      - name: Validate profile structure
+        run: |
+          echo "Validating profile data structure..."
+          node -e "
+            const fs = require('fs');
+            const profiles = JSON.parse(fs.readFileSync('data/profiles.json', 'utf8'));
+            
+            const requiredFields = ['name', 'age', 'photo', 'description'];
+            let errors = [];
+            
+            profiles.forEach((profile, index) => {
+              // Check required fields
+              requiredFields.forEach(field => {
+                if (!profile[field]) {
+                  errors.push(\`Profile \${index + 1}: Missing '\${field}' field\`);
+                }
+              });
+              
+              // Validate field types and constraints
+              if (profile.name && typeof profile.name !== 'string') {
+                errors.push(\`Profile \${index + 1}: 'name' must be a string\`);
+              }
+              
+              if (profile.age && (!Number.isInteger(profile.age) || profile.age < 1 || profile.age > 150)) {
+                errors.push(\`Profile \${index + 1}: 'age' must be a valid integer between 1 and 150\`);
+              }
+              
+              if (profile.description && profile.description.length > 200) {
+                errors.push(\`Profile \${index + 1}: 'description' must be 200 characters or less (currently \${profile.description.length})\`);
+              }
+              
+              if (profile.photo && !profile.photo.startsWith('images/')) {
+                errors.push(\`Profile \${index + 1}: 'photo' path should start with 'images/'\`);
+              }
+            });
+            
+            if (errors.length > 0) {
+              console.error('❌ Validation errors found:');
+              errors.forEach(error => console.error('  - ' + error));
+              process.exit(1);
+            } else {
+              console.log('✅ All profiles have valid structure');
+            }
+          "
+
+      - name: Check for duplicate names
+        run: |
+          echo "Checking for duplicate names..."
+          node -e "
+            const fs = require('fs');
+            const profiles = JSON.parse(fs.readFileSync('data/profiles.json', 'utf8'));
+            
+            const names = profiles.map(p => p.name.toLowerCase());
+            const duplicates = names.filter((name, index) => names.indexOf(name) !== index);
+            
+            if (duplicates.length > 0) {
+              console.error('❌ Duplicate names found:', [...new Set(duplicates)]);
+              process.exit(1);
+            } else {
+              console.log('✅ No duplicate names found');
+            }
+          "
+
+      - name: Verify image files exist
+        run: |
+          echo "Verifying image files..."
+          node -e "
+            const fs = require('fs');
+            const profiles = JSON.parse(fs.readFileSync('data/profiles.json', 'utf8'));
+            
+            let missingFiles = [];
+            
+            profiles.forEach((profile, index) => {
+              if (profile.photo && !fs.existsSync(profile.photo)) {
+                missingFiles.push(\`Profile \${index + 1} (\${profile.name}): Image file '\${profile.photo}' not found\`);
+              }
+            });
+            
+            if (missingFiles.length > 0) {
+              console.error('❌ Missing image files:');
+              missingFiles.forEach(error => console.error('  - ' + error));
+              process.exit(1);
+            } else {
+              console.log('✅ All referenced image files exist');
+            }
+          "
+
+      - name: Check alphabetical order
+        run: |
+          echo "Checking alphabetical order..."
+          node -e "
+            const fs = require('fs');
+            const profiles = JSON.parse(fs.readFileSync('data/profiles.json', 'utf8'));
+            
+            const names = profiles.map(p => p.name);
+            const sortedNames = [...names].sort((a, b) => a.localeCompare(b));
+            
+            const outOfOrder = names.some((name, index) => name !== sortedNames[index]);
+            
+            if (outOfOrder) {
+              console.log('⚠️  Profiles are not in alphabetical order');
+              console.log('Expected order:', sortedNames.join(', '));
+              console.log('Note: The website will automatically sort profiles alphabetically');
+            } else {
+              console.log('✅ Profiles are in alphabetical order');
+            }
+          "

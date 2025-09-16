@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Abik Tandukar",
+    "age": 22,
+    "photo": "images/abik-tandukar.jpg",
+    "description": "From Kathmandu."
+  },
+  {
+    "name": "Abhishek Bhandari",
+    "age": 17,
+    "photo": "images/abhishek-bhandari.jpg",
+    "description": "From Bajhang."
+  },
+  {
+    "name": "Aiman Magar",
+    "age": 23,
+    "photo": "images/aiman-magar.jpg",
+    "description": "From Dharan."
+  },
+  {
+    "name": "Anil Tamang",
+    "age": 19,
+    "photo": "images/anil-tamang.jpg",
+    "description": "From Dolakha."
+  },
+  {
+    "name": "Asbin Rai",
+    "age": 22,
+    "photo": "images/asbin-rai.jpg",
+    "description": "From Khotang."
+  },
+  {
+    "name": "Ashutosh Basnet",
+    "age": 19,
+    "photo": "images/ashutosh-basnet.jpg",
+    "description": "From Itahari."
+  },
+  {
+    "name": "Ashutosh Jha",
+    "age": 20,
+    "photo": "images/ashutosh-jha.jpg",
+    "description": "From Kathmandu."
+  },
+  {
+    "name": "Bijay Adhikari",
+    "age": 22,
+    "photo": "images/bijay-adhikari.jpg",
+    "description": "From Rukum."
+  },
+  {
+    "name": "Dilip Kumar Bhujel",
+    "age": 26,
+    "photo": "images/dilip-kumar-bhujel.jpg",
+    "description": "From Gaighat, Udaypur."
+  },
+  {
+    "name": "Hari Adhikari",
+    "age": 26,
+    "photo": "images/hari-adhikari-26.jpg",
+    "description": "From Jumla."
+  },
+  {
+    "name": "Hari Adhikari",
+    "age": 17,
+    "photo": "images/hari-adhikari-17.jpg",
+    "description": "From Jumla."
+  },
+  {
+    "name": "Hari Bahadur Shahi",
+    "age": 35,
+    "photo": "images/hari-bahadur-shahi.jpg",
+    "description": "Police Sergeant, from Jajarkot."
+  },
+  {
+    "name": "Harihar Silwal",
+    "age": 52,
+    "photo": "images/harihar-silwal.jpg",
+    "description": "From Mainpi, Kathmandu."
+  },
+  {
+    "name": "Ishwor Dhakal",
+    "age": 20,
+    "photo": "images/ishwor-dhakal.jpg",
+    "description": "From Kapurdhara."
+  },
+  {
+    "name": "Janti Singh Thakuri",
+    "age": 21,
+    "photo": "images/janti-singh-thakuri.jpg",
+    "description": "From Kanchanpur."
+  },
+  {
+    "name": "Kapil Shrestha",
+    "age": 30,
+    "photo": "images/kapil-shrestha.jpg",
+    "description": "From Kathmandu."
+  },
+  {
+    "name": "Keshav Adhikari",
+    "age": 32,
+    "photo": "images/keshav-adhikari.jpg",
+    "description": "Location not specified."
+  },
+  {
+    "name": "Kumar Larma",
+    "age": 35,
+    "photo": "images/kumar-larma.jpg",
+    "description": "Police Sergeant, from Dolakha."
+  },
+  {
+    "name": "Lija Adhikari",
+    "age": 20,
+    "photo": "images/lija-adhikari.jpg",
+    "description": "From Morang."
+  },
+  {
+    "name": "Lusan Subba",
+    "age": 21,
+    "photo": "images/lusan-subba.jpg",
+    "description": "From Jhapa."
+  },
+  {
+    "name": "Madan Karki",
+    "age": 22,
+    "photo": "images/madan-karki.jpg",
+    "description": "From Sindhuli."
+  },
+  {
+    "name": "Mukesh Awasthi",
+    "age": 22,
+    "photo": "images/mukesh-awasthi.jpg",
+    "description": "From Dadeldhura."
+  },
+  {
+    "name": "Nabin Shrestha",
+    "age": 19,
+    "photo": "images/nabin-shrestha.jpg",
+    "description": "From Sankhuwasabha."
+  },
+  {
+    "name": "Navin Tamang",
+    "age": 22,
+    "photo": "images/navin-tamang.jpg",
+    "description": "From Sindhuli."
+  },
+  {
+    "name": "Netra Bikram Thapa",
+    "age": 30,
+    "photo": "images/netra-bikram-thapa.jpg",
+    "description": "From Parsa."
+  },
+  {
+    "name": "Nik Magar",
+    "age": 33,
+    "photo": "images/nik-magar.jpg",
+    "description": "From Kirtipur."
+  },
+  {
+    "name": "Nikesh Rizal",
+    "age": 23,
+    "photo": "images/nikesh-rizal.jpg",
+    "description": "From Bardiya."
+  },
+  {
+    "name": "Norbu Tamang",
+    "age": 17,
+    "photo": "images/norbu-tamang.jpg",
+    "description": "From Sindhupalchok."
+  },
+  {
+    "name": "Pawan Khadka",
+    "age": 21,
+    "photo": "images/pawan-khadka.jpg",
+    "description": "From Maharajgunj."
+  },
+  {
+    "name": "Pawan Shahi",
+    "age": 26,
+    "photo": "images/pawan-shahi.jpg",
+    "description": "From Kalikot."
+  },
+  {
+    "name": "Prakash Bohora",
+    "age": 29,
+    "photo": "images/prakash-bohora.jpg",
+    "description": "From Dailekh."
+  },
+  {
+    "name": "Prakash Dhami",
+    "age": 27,
+    "photo": "images/prakash-dhami.jpg",
+    "description": "From Kailali."
+  },
+  {
+    "name": "Rajendra Saud",
+    "age": 25,
+    "photo": "images/rajendra-saud.jpg",
+    "description": "From Achham."
+  },
+  {
+    "name": "Roshan Parajuli",
+    "age": 26,
+    "photo": "images/roshan-parajuli.jpg",
+    "description": "From Kavre."
+  },
+  {
+    "name": "Roshan Regmi",
+    "age": 18,
+    "photo": "images/roshan-regmi.jpg",
+    "description": "From Gorkha."
+  },
+  {
+    "name": "Rupesh Karki",
+    "age": 27,
+    "photo": "images/rupesh-karki-bhaktapur.jpg",
+    "description": "From Bhaktapur."
+  },
+  {
+    "name": "Rupesh Karki",
+    "age": 27,
+    "photo": "images/rupesh-karki-dolakha.jpg",
+    "description": "From Dolakha."
+  },
+  {
+    "name": "Sagar Bhattarai",
+    "age": 21,
+    "photo": "images/sagar-bhattarai.jpg",
+    "description": "From Jhapa."
+  },
+  {
+    "name": "Sahil Ahmad",
+    "age": 20,
+    "photo": "images/sahil-ahmad-chandragiri.jpg",
+    "description": "From Chandragiri, Kathmandu."
+  },
+  {
+    "name": "Sahil Ahmad",
+    "age": 20,
+    "photo": "images/sahil-ahmad-kathmandu.jpg",
+    "description": "From Kathmandu."
+  },
+  {
+    "name": "Samir Lama",
+    "age": 22,
+    "photo": "images/samir-lama.jpg",
+    "description": "From Hetauda."
+  },
+  {
+    "name": "Samu Dhakal",
+    "age": 37,
+    "photo": "images/samu-dhakal.jpg",
+    "description": "From Kathmandu."
+  },
+  {
+    "name": "Sandesh Pradhan",
+    "age": 27,
+    "photo": "images/sandesh-pradhan-27.jpg",
+    "description": "From Nawalparasi."
+  },
+  {
+    "name": "Sandesh Pradhan",
+    "age": 20,
+    "photo": "images/sandesh-pradhan-20.jpg",
+    "description": "From Nawalparasi."
+  },
+  {
+    "name": "Saurabh Gautam",
+    "age": 20,
+    "photo": "images/saurabh-gautam.jpg",
+    "description": "From Bhojpur."
+  },
+  {
+    "name": "Saurabh Kathayat",
+    "age": 19,
+    "photo": "images/saurabh-kathayat.jpg",
+    "description": "From Dhangadhi."
+  },
+  {
+    "name": "Sitesh Jung Pariyar",
+    "age": 22,
+    "photo": "images/sitesh-jung-pariyar.jpg",
+    "description": "From Kathmandu."
+  },
+  {
+    "name": "Som Sharma",
+    "age": 30,
+    "photo": "images/som-sharma.jpg",
+    "description": "From Baglung."
+  },
+  {
+    "name": "Suhani Shrestha",
+    "age": 19,
+    "photo": "images/suhani-shrestha.jpg",
+    "description": "From Bardiya."
+  },
+  {
+    "name": "Surya Rai",
+    "age": 25,
+    "photo": "images/surya-rai.jpg",
+    "description": "From Sindhupalchok."
+  }
+]
